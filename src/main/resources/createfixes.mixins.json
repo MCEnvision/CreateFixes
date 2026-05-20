@@ -1,0 +1,29 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "com.enviouse.createfixes.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "createfixes.refmap.json",
+  "mixins": [
+    "FactoryPanelBehaviourMixin",
+    "SmartObserverBlockEntityMixin",
+    "ChuteBlockEntityMixin",
+    "FunnelBlockEntityMixin",
+    "SchematicannonBlockEntityMixin",
+    "BlockBreakingKineticBlockEntityMixin",
+    "MechanicalCrafterBlockEntityMixin",
+    "ArmBlockEntityMixin",
+    "PackagerBlockEntityMixin",
+    "FrogportBlockEntityMixin",
+    "HosePulleyBlockEntityMixin",
+    "TileEntityMekanismMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

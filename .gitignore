@@ -1,0 +1,32 @@
+# Third-party mod source / jars (do not redistribute)
+CreateSRC/
+Mekanism SRC/
+
+# Gradle
+.gradle/
+build/
+out/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Forge runtime
+run/
+run-data/
+
+# Logs
+*.log
+hs_err_pid*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local dependency jars
+libs/
+
+# Claude Code (machine-local)
+.claude/
+CLAUDE.md
