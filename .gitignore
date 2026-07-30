@@ -30,3 +30,5 @@ libs/
 # Claude Code (machine-local)
 .claude/
 CLAUDE.md
+.codegraph/
+AGENTS.md

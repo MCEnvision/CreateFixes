@@ -131,8 +131,9 @@ mixin {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    flatDir {
-        dirs 'createsrc'
+    maven {
+        name = 'Create'
+        url = 'https://maven.createmod.net'
     }
 }
 
@@ -146,10 +147,10 @@ dependencies {
 
     // Create — compile-only so mixins can resolve target classes and members.
     // Runtime classes come from the user's installed Create jar.
-    compileOnly fg.deobf(files('CreateSRC/Create/create-1.20.1-6.0.8.jar'))
+    compileOnly fg.deobf("com.simibubi.create:create-1.20.1:6.0.8-291")
     // Ponder (extracted from Create's META-INF/jarjar) — Create's SmartBlockEntity implements
     // net.createmod.ponder.api.VirtualBlockEntity, so javac needs this to walk the hierarchy.
-    compileOnly fg.deobf(files('CreateSRC/Ponder-Forge-1.20.1-1.0.91.jar'))
+    compileOnly fg.deobf("net.createmod.ponder:Ponder-Forge-1.20.1:1.0.91")
 
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
